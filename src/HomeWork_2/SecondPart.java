@@ -6,21 +6,21 @@ public class SecondPart {
     public static void main(String[] args) {
 
         System.out.println("----- First task -------");
-        SecondPart.getOddNumbers();
+        getOddNumbers();
         System.out.print("\n");
 
         System.out.println("\n----- Second task -------");
         Scanner sc = new Scanner(System.in);
         System.out.print("Введите любое целое положительное число: ");
         int a = sc.nextInt();
-        System.out.println("Сумма чисел от 1 до " + a + " = "+ SecondPart.getSum(a));
+        System.out.println("Сумма чисел от 1 до " + a + " = "+ getSum(a));
 
         System.out.println("\n----- Third task -------");
-        SecondPart.getPlus();
+        getPlus();
         System.out.print("\n");
 
         System.out.println("\n----- Fourth task -------");
-        SecondPart.getSquareOfNumbers();
+        getSquareOfNumbers();
 
     }
 
@@ -50,7 +50,7 @@ public class SecondPart {
         int i = 0;
         while (i < 98){
             i = i + 7;
-            System.out.print( i + " ") ;
+            System.out.print(i + " ") ;
         }
     }
 

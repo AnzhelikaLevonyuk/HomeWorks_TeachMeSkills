@@ -6,14 +6,14 @@ public class Dop {
     public static void main(String[] args) {
 
         System.out.println("----- Fibonacchi -------");
-        Dop.fibonacci();
+        fibonacci();
         System.out.println( );
 
         System.out.println("\n----- Summ of Vklad wit % -------");
-        Dop.vklad();
+        vklad();
 
         System.out.println("\n----- Multiplication table -------");
-        Dop.tabl();
+        tabl();
     }
 
     // 1. Выведите в консоль первые N членов последовательности Фибоначчи
@@ -29,11 +29,11 @@ public class Dop {
         System.out.print("Введите любое целое положительное число: ");
         int count = sc.nextInt();
 
-        System.out.print( "Последовательность Фибоначчи: " + n1 + " " + n2 + " " );
+        System.out.print("Последовательность Фибоначчи: " + n1 + " " + n2 + " " );
 
-        for ( int i = 2; i < count; i ++){
+        for (int i = 1; i <= count; i ++){
             sum = n1 + n2;
-            System.out.print( sum + " " );
+            System.out.print(sum + " " );
             n1 = n2;
             n2 = sum;
         }
@@ -71,7 +71,6 @@ public class Dop {
 
     // 3. Напишите программу, которая выводит на консоль таблицу умножения.
     public static void tabl() {
-        //int a = 1;
 
         for (int i = 1; i < 10; i++) {
             for (int j = 1; j < 10; j++) {

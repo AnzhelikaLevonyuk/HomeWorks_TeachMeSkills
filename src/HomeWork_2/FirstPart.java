@@ -3,27 +3,26 @@ package HomeWork_2;
 import java.util.Scanner;
 
 public class FirstPart {
-    private static Object Switch;
 
     public static void main(String[] args) {
 
         System.out.println("\n-----Switch- case-------");
-        FirstPart.first();
+        first();
 
         System.out.println("\n----- If-else-if -------");
-        FirstPart.second();
+        second();
 
         System.out.println("\n----- Third task -------");
         Scanner sc = new Scanner(System.in);
         System.out.print("Введите любое число: ");
-        System.out.println(FirstPart.third(sc.nextInt()));
+        System.out.println(third(sc.nextInt()));
 
         System.out.println("\n----- Fourth task -------");
         System.out.print("Температура на улице: ");
-        System.out.println(FirstPart.fourth(sc.nextInt()));
+        System.out.println(fourth(sc.nextInt()));
 
         System.out.println("\n----- Fifth task -------");
-        FirstPart.fifth();
+        fifth();
 
 
     }
@@ -73,7 +72,7 @@ public class FirstPart {
         int month = sc.nextInt();
 
         String season;
-        if ( month == 1 || month == 2 || month == 12){
+        if (month == 1 || month == 2 || month == 12){
             season = "Winter";
         } else if
         (month == 3 || month == 4 || month == 5)
