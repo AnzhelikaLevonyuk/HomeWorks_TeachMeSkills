@@ -18,7 +18,7 @@ public class Dop {
 
     // 1. Выведите в консоль первые N членов последовательности Фибоначчи
     // (где N- количество членов, вводимое пользователем из консоли).
-    public static void fibonacci () {
+    public static void fibonacci() {
 
         Scanner sc = new Scanner(System.in);
 
@@ -31,7 +31,8 @@ public class Dop {
 
         System.out.print("Последовательность Фибоначчи: " + n1 + " " + n2 + " ");
 
-        for (int i = 1; i <= count; i ++){
+        for (int i = 1; i <= count; i ++)
+        {
             sum = n1 + n2;
             System.out.print(sum + " " );
             n1 = n2;
@@ -47,7 +48,7 @@ public class Dop {
 //
 //    Для вычисления суммы с учетом процентов используйте цикл for.
 //    Пусть сумма вклада будет представлять тип float.
-    public static void vklad (){
+    public static void vklad() {
 
         Scanner sc = new Scanner(System.in);
         System.out.print("Введите сумму вклада: " );
@@ -62,7 +63,8 @@ public class Dop {
         float procent = (float) (sum * (percent / 100));
 
 
-        for (int i = 1; i <= countOfMonth; i ++){
+        for (int i = 1; i <= countOfMonth; i ++)
+        {
             sum += procent;
         }
 
@@ -72,8 +74,10 @@ public class Dop {
     // 3. Напишите программу, которая выводит на консоль таблицу умножения.
     public static void tabl() {
 
-        for (int i = 1; i < 10; i++) {
-            for (int j = 1; j < 10; j++) {
+        for (int i = 1; i < 10; i++)
+        {
+            for (int j = 1; j < 10; j++)
+            {
                 int itog = i * j;
 
                 System.out.println (i + " * " + j + " = " + itog + " ");

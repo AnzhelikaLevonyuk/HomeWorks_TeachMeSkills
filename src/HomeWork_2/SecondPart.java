@@ -25,9 +25,11 @@ public class SecondPart {
     }
 
     // 1. При помощи цикла for вывести в консоль нечетные числа от 1 до 99.
-    public static void getOddNumbers (){
-        for (int i = 1; i < 100; i++){
-            if (i % 2 == 1){
+    public static void getOddNumbers() {
+        for (int i = 1; i < 100; i++)
+        {
+            if (i % 2 == 1)
+            {
                 System.out.print( i + " " );
             }
         }
@@ -46,17 +48,19 @@ public class SecondPart {
 
     // 3. Необходимо, чтоб программа выводила в консоль вот такую последовательность: 7 14 21 28 35 42 49 56 63 70 77 84 91 98.
     // В решении используйте цикл while.
-    public static void getPlus(){
+    public static void getPlus() {
         int i = 0;
-        while (i < 98){
+        while (i < 98)
+        {
             i = i + 7;
             System.out.print(i + " ") ;
         }
     }
 
     // 4. Составьте программу, выводящую в консоль квадраты чисел от 10 до 20 включительно.
-    public static void getSquareOfNumbers (){
-        for (int i = 10; i <= 20; i++){
+    public static void getSquareOfNumbers() {
+        for (int i = 10; i <= 20; i++)
+        {
             int b = i * i;
             System.out.print(b + " ");
         }
