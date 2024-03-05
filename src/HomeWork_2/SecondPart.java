@@ -58,7 +58,7 @@ public class SecondPart {
     public static void getSquareOfNumbers (){
         for (int i = 10; i <= 20; i++){
             int b = i * i;
-            System.out.print(b + " " );
+            System.out.print(b + " ");
         }
     }
 }

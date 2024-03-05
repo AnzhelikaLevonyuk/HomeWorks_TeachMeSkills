@@ -29,7 +29,7 @@ public class Dop {
         System.out.print("Введите любое целое положительное число: ");
         int count = sc.nextInt();
 
-        System.out.print("Последовательность Фибоначчи: " + n1 + " " + n2 + " " );
+        System.out.print("Последовательность Фибоначчи: " + n1 + " " + n2 + " ");
 
         for (int i = 1; i <= count; i ++){
             sum = n1 + n2;

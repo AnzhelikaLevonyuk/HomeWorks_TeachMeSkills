@@ -74,7 +74,8 @@ public class FirstPart {
         String season;
         if (month == 1 || month == 2 || month == 12){
             season = "Winter";
-        } else if
+        }
+        else if
         (month == 3 || month == 4 || month == 5)
         {
             season = "Spring";
