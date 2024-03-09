@@ -8,8 +8,8 @@ public class Part2 {
     public static void main(String[] args) {
 
         System.out.println("----- Сhessboard -------");
-        сhess();
-        //chess2();
+        chess();
+
 
         System.out.println("\n----- Sum of All Elements -------");
         sumOfAllElements();
@@ -25,29 +25,8 @@ public class Part2 {
 
     // Создать двухмерный массив String'ов 8х8. С помощью циклов задать элементам
     // значения B(Black) или W(White).
-    public static void сhess() {
 
-        String [][] arr = new String[8][8];
-
-        for (int i = 0; i < 8; i++) {
-            for (int j = 0; j < 8; j++) {
-                if ((i % 2 == 0 && j % 2 == 0) || (i % 2 == 1 && j % 2 == 1))
-                {
-                    arr[i][j] = "W";
-                }
-                else
-                {
-                    arr[i][j] = "B";
-                }
-
-                System.out.print(arr[i][j]+ " ");
-            }
-            System.out.println(" ");
-            //System.out.println(Arrays.toString(arr[i]));
-        }
-    }
-
-    public static void chess2() {
+    public static void chess() {
 
         String [][] arr = new String[8][8];
 
@@ -136,7 +115,7 @@ public class Part2 {
             int row = arr.length-1;
             int col = i;
 
-            while (row >= 0 && col < arr[i].length)
+            while (row >= 0 && col < arr[0].length)
             {
                 System.out.print(arr[row][col] + " ");
                 col++;

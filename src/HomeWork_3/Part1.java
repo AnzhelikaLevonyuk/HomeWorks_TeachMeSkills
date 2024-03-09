@@ -96,7 +96,7 @@ public class Part1 {
 
         for (int i = 0; i < arr.length; i++)
         {
-            if (!(number == arr[i]))
+            if (number != arr[i])
             {
                 count++;
             }
@@ -113,7 +113,7 @@ public class Part1 {
 
         for (int i = 0, j = 0; i < arr.length; i++)
         {
-            if (!(number == arr[i]))
+            if (number != arr[i])
             {
                 newArr[j] = arr[i];
                 j++;
@@ -187,11 +187,7 @@ public class Part1 {
 
         for (int i = 0; i < arr1.length; i++)
         {
-             sum1 += arr1[i];
-        }
-
-        for (int i = 0; i < arr2.length; i++)
-        {
+            sum1 += arr1[i];
             sum2 += arr2[i];
         }
 
