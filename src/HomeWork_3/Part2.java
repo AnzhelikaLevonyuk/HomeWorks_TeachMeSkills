@@ -17,6 +17,7 @@ public class Part2 {
         System.out.println("\n----- Diagonals -------");
         diagonal();
 
+        System.out.println(" ");
         System.out.println("\n----- Sort elements in the rows -------");
         sort();
 
@@ -96,33 +97,56 @@ public class Part2 {
             System.out.println(Arrays.toString(arr[i]));
         }
 
-        for (int i = 0 ; i < arr.length ; i++)
-        {
-            int row = i;
-            int col = 0;
+       if (n == m)
+       {
+           System.out.print("Главная диагональ: ");
+           for (int i = 0; i< arr.length; i ++)
+           {
+               System.out.print(arr[i][i] + " ");
 
-            while (row >= 0 && col < arr[i].length)
-            {
-                System.out.print(arr[row][col] + " ");
-                col++;
-                row--;
-            }
-            System.out.println();
-        }
+           }
 
-        for (int i = 1 ; i < arr[0].length ; i++)
-        {
-            int row = arr.length-1;
-            int col = i;
+           System.out.print("\nПобочная диагональ: ");
 
-            while (row >= 0 && col < arr[0].length)
-            {
-                System.out.print(arr[row][col] + " ");
-                col++;
-                row--;
-            }
-            System.out.println();
-        }
+           for (int i = 0; i< arr.length; i ++)
+           {
+               System.out.print(arr[i][arr.length - i - 1] + " ");
+           }
+       }
+       else if (n > m)
+       {
+           System.out.print("Главная диагональ: ");
+           for (int i = 0, j = 0 ; i < m; i ++)
+           {
+               System.out.print(arr[i][j] + " ");
+               j++;
+           }
+
+           System.out.print("\nПобочная диагональ: ");
+           for (int i = 0, j = 0 ; i < m; i ++)
+           {
+               System.out.print(arr[i][m - j - 1] + " ");
+               j++;
+           }
+       }
+       else
+       {
+           System.out.print("Главная диагональ: ");
+           for (int i = 0, j = 0 ; i < n; i ++)
+           {
+               System.out.print(arr[i][j] + " ");
+               j ++;
+           }
+
+           System.out.print("\nПобочная диагональ: ");
+           for (int i = 0, j = 0 ; i < n; i ++)
+           {
+               System.out.print(arr[i][n - j - 1] + " ");
+               j++;
+           }
+       }
+
+
     }
 
    // Отсортируйте элементы в строках двумерного массива по возрастанию.
@@ -148,11 +172,6 @@ public class Part2 {
             System.out.println(Arrays.toString(arr[i]));
         }
     }
-
-
-
-
-
 }
 
 

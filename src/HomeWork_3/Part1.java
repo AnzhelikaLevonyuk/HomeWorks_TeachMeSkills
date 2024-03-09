@@ -57,20 +57,18 @@ public class Part1 {
 
         System.out.print("Введите ваше число: ");
         int number = sc.nextInt();
-        int count = 0;
+        boolean found = false;
 
         for (int i = 0; i < arr.length; i++)
         {
             if (number == arr[i])
             {
-                count++;
+                found = true;
+                System.out.println("Ваше число входит в массив ");
+                break;
             }
         }
-        if (count > 0)
-        {
-            System.out.println("Ваше число входит в массив " + count + " раз");
-        }
-        else
+        if (!found)
         {
             System.out.println("Ваше число не входит в массив");
         }
