@@ -103,7 +103,8 @@ public class Part1 {
                 count2++;
             }
         }
-       if (count2 == 0){
+       if (count2 == 0)
+       {
            System.out.println("Ваше число не входит в массив");
        }
 

@@ -116,10 +116,10 @@ public class Part2 {
        else if (n > m)
        {
            System.out.print("Главная диагональ: ");
-           for (int i = 0, j = 0 ; i < m; i ++)
+           for (int i = 0; i < m; i ++)
            {
-               System.out.print(arr[i][j] + " ");
-               j++;
+               System.out.print(arr[i][i] + " ");
+
            }
 
            System.out.print("\nПобочная диагональ: ");
@@ -132,10 +132,10 @@ public class Part2 {
        else
        {
            System.out.print("Главная диагональ: ");
-           for (int i = 0, j = 0 ; i < n; i ++)
+           for (int i = 0; i < n; i ++)
            {
-               System.out.print(arr[i][j] + " ");
-               j ++;
+               System.out.print(arr[i][i] + " ");
+
            }
 
            System.out.print("\nПобочная диагональ: ");
