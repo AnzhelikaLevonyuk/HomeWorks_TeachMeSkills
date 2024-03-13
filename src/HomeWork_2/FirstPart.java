@@ -118,7 +118,7 @@ public class FirstPart {
             return "Тепло";
         }
         // Если –5>= t > –20, то вывести «Нормально».
-        else if (degree <= -5 && degree > -20)
+        else if (degree > -20)
         {
             return "Нормально";
         }
@@ -127,10 +127,7 @@ public class FirstPart {
         {
             return "Холодно";
         }
-        else
-        {
-            return "Не знаю";
-        }
+       return null;
     }
 
     // 5. По введенному из консоли номеру определить цвет радуги (1 – красный, 4 – зеленый и т. д.)
