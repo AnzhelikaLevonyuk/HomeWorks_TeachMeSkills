@@ -1,10 +1,10 @@
 package homeWork_4_Dop;
 
 public class Comp {
-    int price;
-    String model;
-    HDD hdd;
-    RAM ram;
+    public int price;
+    public String model;
+    public HDD hdd;
+    public RAM ram;
 
     public Comp(int price, String model)
     {

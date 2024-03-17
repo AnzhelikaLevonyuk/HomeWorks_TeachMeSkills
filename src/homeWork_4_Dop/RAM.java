@@ -1,13 +1,12 @@
 package homeWork_4_Dop;
 
 public class RAM {
-    String name;
-    double volume;
+    public String name;
+    public double volume;
 
-    public RAM ()
+    public RAM()
     {
-        name = "не указано";
-        volume = 0;
+
     }
 
     public RAM (String name, double volume)

@@ -1,8 +1,8 @@
 package homeWork_4;
 
 public class CreditCard {
-    int cardNumber;
-    double amountOnTheCard;
+    public int cardNumber;
+    public double amountOnTheCard;
 
     public CreditCard(int cardNumber, double amountOnTheCard)
     {
@@ -11,24 +11,24 @@ public class CreditCard {
     }
 
     //Добавьте метод, который позволяет начислять сумму на кредитную карточку.
-     public void creditingMoneyToTheCard(double sum)
+     public double creditingMoneyToTheCard(double sum)
      {
          amountOnTheCard += sum;
-         System.out.println("\nОперация прошла успешнно! \nТекущая сумма счета: " + amountOnTheCard);
+         return amountOnTheCard;
+
      }
 
-
     //Добавьте метод, который позволяет снимать с карточки некоторую сумму.
-    public void withdrawingMoneyFromTheCard(double sum)
+    public double withdrawingMoneyFromTheCard(double sum)
     {
         if ( amountOnTheCard > sum)
         {
             amountOnTheCard -= sum;
-            System.out.println("\nОперация прошла успешнно! \nТекущая сумма счета: " + amountOnTheCard);
+            return amountOnTheCard;
         }
         else
         {
-            System.out.println("\nУ вас недостаточно средств для проведения данной операции");
+            return -1;
         }
     }
 
