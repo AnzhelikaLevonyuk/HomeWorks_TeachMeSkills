@@ -9,9 +9,9 @@ public class Test {
 
         CreditCard card3 = new CreditCard(789,3300);
 
-        card1.creditingMoneyToTheCard( 550);
-        card2.creditingMoneyToTheCard( 500);
-        card3.withdrawingMoneyFromTheCard( 5000);
+        card1.creditingMoneyToTheCard(550);
+        card2.creditingMoneyToTheCard(500);
+        card3.withdrawingMoneyFromTheCard(5000);
 
         card1.infoAboutTheCard();
         card2.infoAboutTheCard();
