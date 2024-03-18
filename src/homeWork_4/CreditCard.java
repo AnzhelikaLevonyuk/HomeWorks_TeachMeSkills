@@ -21,7 +21,7 @@ public class CreditCard {
     //Добавьте метод, который позволяет снимать с карточки некоторую сумму.
     public double withdrawingMoneyFromTheCard(double sum)
     {
-        if ( amountOnTheCard > sum)
+        if (amountOnTheCard > sum)
         {
             amountOnTheCard -= sum;
             return amountOnTheCard;
