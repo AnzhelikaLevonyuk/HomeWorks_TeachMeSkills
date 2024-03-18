@@ -7,7 +7,7 @@ public class Registr {
     public static void saveDocument (Document d)
     {
 
-        for ( int i = 0; i < arr.length; i++)
+        for (int i = 0; i < arr.length; i++)
         {
             if (arr[i] == null)
             {
@@ -19,7 +19,7 @@ public class Registr {
 
     public static void getInfoAboutDocument(Document d)
     {
-        for ( int i = 0; i < arr.length; i++)
+        for (int i = 0; i < arr.length; i++)
         {
             if(d == arr[i])
             {

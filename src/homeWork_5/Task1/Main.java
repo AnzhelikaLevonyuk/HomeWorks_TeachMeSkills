@@ -33,7 +33,8 @@ public class Main {
         double sum = 0;
         Shape[] arr = { circle, circle2, rectangle, square, square2};
 
-        for (Shape shape : arr) {
+        for (Shape shape : arr)
+        {
             sum += shape.getPerimetr();
         }
 
