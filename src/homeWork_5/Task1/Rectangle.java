@@ -2,8 +2,8 @@ package homeWork_5.Task1;
 
 public class Rectangle extends Shape
 {
-    public double sideA;
-    public double sideB;
+    protected double sideA;
+    protected double sideB;
 
     public Rectangle (double sideA, double sideB)
     {

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Circle extends Shape
 {
-    public double radius;
+    protected double radius;
 
     public Circle(double radius)
     {

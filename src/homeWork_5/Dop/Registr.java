@@ -13,13 +13,6 @@ public class Registr {
 
     public static void getInfoAboutDocument(int index)
     {
-        for (int i = 0; i < arr.length; i++)
-        {
-            if(index == i)
-            {
-                System.out.println(arr[i]);
-                break;
-            }
-        }
+        System.out.println(arr[index]);
     }
 }
