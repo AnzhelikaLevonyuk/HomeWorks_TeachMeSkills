@@ -14,15 +14,12 @@ public class Rectangle extends Shape
     @Override
     public double getArea()
     {
-        double area = sideA * sideB;
-        return area;
+        return sideA * sideB;
     }
 
     @Override
     public double getPerimetr()
     {
-        double perimetr = (sideA + sideB) * 2;
-        System.out.println("Периметр прямоугольника = " + perimetr);
-        return perimetr;
+        return (sideA + sideB) * 2;
     }
 }

@@ -16,9 +16,9 @@ public class Main {
         Registr.saveDocument(b);
         Registr.saveDocument(c);
 
-        Registr.getInfoAboutDocument(a);
-        Registr.getInfoAboutDocument(b);
-        Registr.getInfoAboutDocument(c);
+        Registr.getInfoAboutDocument(0);
+        Registr.getInfoAboutDocument(1);
+        Registr.getInfoAboutDocument(2);
 
         //System.out.println(Arrays.toString(Registr.arr));
 

@@ -5,29 +5,23 @@ import java.util.Scanner;
 public class Circle extends Shape
 {
     public double radius;
-    public final double PI = 3.14;
 
-    public Circle()
+    public Circle(double radius)
     {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Введите радиус круга: ");
-        this.radius = sc.nextDouble();
+       this.radius = radius;
     }
 
     @Override
     public double getArea()
     {
-        double area = PI * radius * radius ;
-        return area;
+        return Math.PI * radius * radius;
     }
 
 
     @Override
     public double getPerimetr()
     {
-        double perimetr = 2 * PI * radius ;
-        System.out.println("Периметр круга = " + perimetr);
-        return perimetr;
+        return 2 * Math.PI * radius;
     }
 
 }

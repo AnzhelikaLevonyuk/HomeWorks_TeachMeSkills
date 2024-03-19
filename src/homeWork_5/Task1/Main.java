@@ -5,13 +5,18 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        Circle circle = new Circle();
-
-        System.out.println(" ");
-
-        Circle circle2 = new Circle();
 
         Scanner sc = new Scanner(System.in);
+        System.out.print("Введите радиус круга: ");
+        double radius = sc.nextDouble();
+        Circle circle = new Circle(radius);
+
+
+        System.out.print("\nВведите радиус круга: ");
+        double radius2 = sc.nextDouble();
+        Circle circle2 = new Circle(radius2);
+
+
         System.out.print("\nВведите 1-ую сторону прямоугольника: ");
         double sideA = sc.nextDouble();
         System.out.print("Введите 2-ую сторону прямоугольника: ");
@@ -41,6 +46,4 @@ public class Main {
         System.out.println("\nСумма периметров всех фигур = " + sum);
 
     }
-
-
 }

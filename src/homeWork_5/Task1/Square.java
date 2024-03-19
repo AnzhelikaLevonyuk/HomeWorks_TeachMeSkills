@@ -13,16 +13,13 @@ public class Square extends Rectangle {
     @Override
     public double getArea()
     {
-        double area = sideA * sideA ;
-        return area;
+        return sideA * sideA;
     }
 
     @Override
     public double getPerimetr()
     {
-        double perimetr = 4 * sideA ;
-        System.out.println("Периметр квадрата = " + perimetr);
-        return perimetr;
+        return 4 * sideA;
     }
 
 }
