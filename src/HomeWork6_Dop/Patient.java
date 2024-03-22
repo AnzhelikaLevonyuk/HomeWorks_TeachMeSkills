@@ -21,4 +21,8 @@ public class Patient {
     {
         this.doctor = doctor;
     }
+
+    public Doctor getDoctor() {
+        return doctor;
+    }
 }
