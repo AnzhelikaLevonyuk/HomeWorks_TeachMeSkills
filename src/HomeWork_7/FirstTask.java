@@ -14,7 +14,7 @@ public class FirstTask {
         String shortWord = arr[0];
         String longWord = arr[0];
 
-        for( int i = 1; i < arr.length; i++)
+        for(int i = 1; i < arr.length; i++)
         {
             if (longWord.length() <= arr[i].length())
             {

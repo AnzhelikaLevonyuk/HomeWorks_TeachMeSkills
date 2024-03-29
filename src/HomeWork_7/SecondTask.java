@@ -3,7 +3,8 @@ package HomeWork_7;
 import java.util.Scanner;
 
 public class SecondTask {
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Введите строку: ");
@@ -12,7 +13,8 @@ public class SecondTask {
         String result = arr[0];
 
         for (String minimalCharacters: arr) {
-            if (getUniqueCharAmount(result) > getUniqueCharAmount(minimalCharacters)) {
+            if (getUniqueCharAmount(result) > getUniqueCharAmount(minimalCharacters))
+            {
                 result = minimalCharacters;
             }
         }
@@ -22,15 +24,26 @@ public class SecondTask {
     public static int getUniqueCharAmount(String word)
     {
         int count = 0;
-        String[] arr = word.split("");
-        for(String ch : arr)
-        {
-            if (word.contains(ch))
+
+        // first solution
+
+//        String[] arr = word.split("");
+//
+//        for(String ch : arr)
+//        {
+//            if (word.contains(ch))
+//            {
+//               count++;
+//               word = word.replace(ch, "");
+//            }
+
+            while (!word.isEmpty())
             {
-                count++;
+                String ch = String.valueOf(word.charAt(0));
+                count ++;
                 word = word.replace(ch, "");
             }
-        }
+
         return count;
     }
 }
