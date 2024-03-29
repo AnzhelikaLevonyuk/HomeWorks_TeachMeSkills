@@ -25,11 +25,14 @@ public class Task2 {
 
 
        // Second solution
-        for (int i = 0; i < list.size(); i++) {
+        for (int i = 0; i < list.size(); i++)
+        {
             int currentItem = list.get(i);
 
-            for (int j = i + 1; j < list.size(); j++) {
-                if (currentItem == list.get(j)) {
+            for (int j = i + 1; j < list.size(); j++)
+            {
+                if (currentItem == list.get(j))
+                {
                     list.remove(j);
                     j--;
                 }
