@@ -5,13 +5,10 @@ import java.util.Scanner;
 public class Task1 {
     public static void main(String[] args)
     {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Введите целое число: ");
         int sum = 0;
-
-        while (scan.hasNextInt())
+        while (true)
         {
-            int a = scan.nextInt();
+            int a = getNum();
             if (a < 0)
             {
                 break;
@@ -20,13 +17,21 @@ public class Task1 {
             {
                 sum += a;
             }
-
-            while (!scan.hasNextInt())
-            {
-                scan.next();
-            }
         }
         System.out.println("Сумма ваших чисел = " + sum);
+    }
+    public static int getNum()
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Введите целое число: ");
+        try
+        {
+            return sc.nextInt();
+        }
+        catch (Exception ex)
+        {
+            return getNum();
+        }
     }
 }
 

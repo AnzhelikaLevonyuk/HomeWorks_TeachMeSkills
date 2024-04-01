@@ -1,8 +1,6 @@
 package HomeWork_8;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Task2 {
     public static void main(String[] args)
@@ -12,19 +10,15 @@ public class Task2 {
         int number = sc.nextInt();
 
         List<Integer> list = new ArrayList<>();
+
         for (int i = 0; i < number; i++)
         {
             System.out.println("Введите " + (i + 1) + " -ое число: ");
             list.add(sc.nextInt());
         }
 
-       // First solution
-//        HashSet<Integer> set = new HashSet<>(list);
-//        list.clear();
-//        list.addAll(set);
+        Set<Integer> list2 = new HashSet<>();
 
-
-       // Second solution
         for (int i = 0; i < list.size(); i++)
         {
             int currentItem = list.get(i);
@@ -33,11 +27,24 @@ public class Task2 {
             {
                 if (currentItem == list.get(j))
                 {
+                   list2.add(currentItem);
+                }
+            }
+        }
+//        list.removeIf(value -> list2.contains(value));
+//        System.out.println(list);
+
+        for (int currentValue : list2)
+        {
+            for (int j = 0; j < list.size(); j++)
+            {
+                if (currentValue == list.get(j))
+                {
                     list.remove(j);
                     j--;
                 }
             }
         }
         System.out.println(list);
+        }
     }
-}
