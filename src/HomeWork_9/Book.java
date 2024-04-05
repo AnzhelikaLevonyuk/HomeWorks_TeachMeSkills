@@ -13,6 +13,27 @@ public class Book
     {
 
     }
+
+    public void setId(int id)
+    {
+        this.id = id;
+    }
+
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+
+    public void setDescription(String description)
+    {
+        this.description = description;
+    }
+
+    public void setAuthor(String author)
+    {
+        this.author = author;
+    }
+
     public int getId()
     {
         return id;
@@ -31,25 +52,6 @@ public class Book
     public String getAuthor()
     {
         return author;
-    }
-
-    public void fillInfoAboutBook()
-    {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Введите id книги: ");
-        id = sc.nextInt();
-
-        sc.nextLine();
-
-        System.out.println("Введите название книги: ");
-        name = sc.nextLine();
-
-        System.out.println("Введите описание вашей книги: ");
-        description = sc.nextLine();
-
-        System.out.println("Введите автора вашей книги: ");
-        author = sc.nextLine();
-
     }
 
     @Override

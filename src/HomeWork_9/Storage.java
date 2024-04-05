@@ -4,49 +4,78 @@ import java.util.*;
 
 public class Storage
 {
-    public static Map <String, List<Book>> storage = new HashMap<>();
+    public static Map<String,Map<String,Book>> storage = new HashMap<>();
 
     public static void saveBook (Book book)
     {
         String author = book.getAuthor();
         if (storage.containsKey(author))
         {
-            storage.get(author).add(book);
+            storage.get(author).put(book.getName(),book);
             System.out.println("Книга успешно добавлена в хранилище");
         }
         else
         {
-            storage.computeIfAbsent(author,k-> new ArrayList<>()).add(book);
+            storage.put(author,new HashMap<>());
+            storage.get(author).put(book.getName(),book);
             System.out.println("Книга успешно добавлена в хранилище");
         }
     }
 
-    public static void deleteBook (Book book)
+    public static void deleteBook (String author, String bookTitle)
     {
-        String author = book.getAuthor();
-        int countBooks = 0;
         if (storage.containsKey(author))
         {
-            List<Book> books = storage.get(author);
+            Map<String,Book> books = storage.get(author);
 
-//            long countBooks = books.stream()
-//                    .map(Book :: getName)
-//                    .count();
-
-            for (Book listBooks : books)
+            if (books.containsKey(bookTitle))
             {
-                countBooks++;
-            }
-
-            if (countBooks > 1)
-            {
-                storage.get(author).remove(book);
-                System.out.println("Книга успешно удалена из хранилища");
+                if (books.size() > 1)
+                {
+                    books.remove(bookTitle);
+                    System.out.println("Книга удалена из хранилища");
+                }
+                else
+                {
+                    storage.remove(author);
+                    System.out.println("Книга удалена из хранилища");
+                }
             }
             else
             {
-                storage.remove(author);
-                System.out.println("Книга успешно удалена из хранилища");
+                System.out.println("Такой книги этого автора нет в хранилище");
+            }
+        }
+        else
+        {
+            System.out.println("Книги такого автора нет в хранилище");
+        }
+    }
+
+    public static void getBooks (String author)
+    {
+        if (storage.containsKey(author))
+        {
+            Map<String,Book> books = storage.get(author);
+            System.out.println("У этого автора, есть " + books.size() + " книги: ");
+            for (Map.Entry<String,Book> entry : books.entrySet())
+            {
+                System.out.println(entry.getKey());
+            }
+        }
+        else
+        {
+            System.out.println("Книг этого автора нет в хранилище");
+        }
+    }
+    public static void getInfoAboutBook(String author, String bookTitle)
+    {
+        if (storage.containsKey(author))
+        {
+            Map<String,Book> books = storage.get(author);
+            if (books.containsKey(bookTitle))
+            {
+                System.out.println(books.get(bookTitle));
             }
         }
         else
@@ -55,30 +84,8 @@ public class Storage
         }
     }
 
-    public static void getBooks (String author)
-    {
-        if (storage.containsKey(author))
-        {
-            List<Book> books = storage.get(author);
-            System.out.println("У этого автора, есть книги: ");
-            for (Book book : books)
-            {
-                System.out.println(book.getName());
-            }
-        }
-        else
-        {
-            System.out.println("Книг этого автора нет в хранилище");
-        }
-
-    }
-    public static void getInfoAboutBook(Book book)
-    {
-        System.out.println(book);
-    }
-
     public static void getAuthors()
     {
-        System.out.println("Список всех имеющихся авторов: " + storage.keySet());
+        System.out.println("\nСписок всех имеющихся авторов: " + storage.keySet());
     }
 }

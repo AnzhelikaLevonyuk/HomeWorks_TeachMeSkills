@@ -5,31 +5,61 @@ import java.util.*;
 public class Main {
     public static void main(String[] args)
     {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Сколько книг вы хотите добавить в хранилище?");
+        int count = sc.nextInt();
 
-        Book book1 = new Book();
-        book1.fillInfoAboutBook();
-        Book book2 = new Book();
-        book2.fillInfoAboutBook();
-        Book book3 = new Book();
-        book3.fillInfoAboutBook();
-        Book book4 = new Book();
-        book4.fillInfoAboutBook();
-
-        Storage.saveBook(book1);
-        Storage.saveBook(book2);
-        Storage.saveBook(book3);
-        Storage.saveBook(book4);
+        while (count > 0)
+        {
+            Book book = fillInfoAboutBook();
+            Storage.saveBook(book);
+            count --;
+        }
 
         Storage.getAuthors();
 
-        Storage.getInfoAboutBook(book1);
+        System.out.println("\nЧтобы узнать информацию о книге");
+        Storage.getInfoAboutBook(getAuthor(),getBookName());
 
-        Storage.deleteBook(book2);
+        System.out.println("\nЧтобы удалить определенную книгу");
+        Storage.deleteBook(getAuthor(),getBookName());
 
+        System.out.println("\nЧтобы просмотреть весь список книг определенного автора");
+        Storage.getBooks(getAuthor());
+    }
+
+    public static Book fillInfoAboutBook()
+    {
+        Book newBook = new Book();
         Scanner sc = new Scanner(System.in);
-        System.out.println("Введите автора, чтобы просмотреть его список книг:");
-        String author = sc.next();
-        Storage.getBooks(author);
+        System.out.println("Введите id книги: ");
+        newBook.setId(sc.nextInt());
 
+        sc.nextLine();
+
+        System.out.println("Введите название книги: ");
+        newBook.setName(sc.nextLine());
+
+        System.out.println("Введите описание вашей книги: ");
+        newBook.setDescription(sc.nextLine());
+
+        System.out.println("Введите автора вашей книги: ");
+        newBook.setAuthor(sc.nextLine());
+
+        return newBook;
+    }
+
+    public static String getAuthor()
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Введите автора книги:");
+        return sc.nextLine();
+    }
+
+    public static String getBookName()
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Введите название книги:");
+        return sc.nextLine();
     }
 }
