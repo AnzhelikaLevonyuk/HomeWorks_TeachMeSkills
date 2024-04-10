@@ -6,7 +6,7 @@ public class Storage
 {
     public static Map<String,Map<String,Book>> storage = new HashMap<>();
 
-    public static void saveBook (Book book)
+    public static void saveBook(Book book)
     {
         String author = book.getAuthor();
         if (storage.containsKey(author))
@@ -22,7 +22,7 @@ public class Storage
         }
     }
 
-    public static void deleteBook (String author, String bookTitle)
+    public static void deleteBook(String author, String bookTitle)
     {
         if (storage.containsKey(author))
         {
@@ -52,7 +52,7 @@ public class Storage
         }
     }
 
-    public static void getBooks (String author)
+    public static void getBooks(String author)
     {
         if (storage.containsKey(author))
         {
